@@ -30,7 +30,7 @@ log=user&pwd=CTF%7be88549a3-994b-467f-b477-2eb68e3199b5%7d&wp-submit=Log+In&redi
 log=user&pwd=CTF%7b1717b648-0323-436c-aed2-52eb114729d6%7d&wp-submit=Log+In&redirect_to=http%3A%2F%2F165.232.75.22%2Fwp-admin%2F&testcookie=1
 ```
 
-Easy, right? We can see several flags, with url encoded curly braces. Now we just need to decode them and to guess the real one and it happens to be the last
+Easy, right? We can see several flags, with url encoded curly braces. Now we just need to decode them and guess the real one and it happens to be the last
 
 
 ## CTF{1717b648-0323-436c-aed2-52eb114729d6}
