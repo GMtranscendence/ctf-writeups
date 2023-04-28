@@ -1,5 +1,4 @@
 # Press The Word
----
 
 We are given a file called __network_dump.cap__.
 
@@ -12,6 +11,7 @@ _file_ command confirms it
 
 network_dump.cap: pcap capture file, microsecond ts (little-endian) - version 2.4 (Ethernet, capture length 262144)
 ```
+---
 
 First things first, we are looking for the simplest possible solution. So we try to use _strings_ command on the file and _grep_ any occurence of the word __CTF__ which is the part of the flag format
 
@@ -32,5 +32,6 @@ log=user&pwd=CTF%7b1717b648-0323-436c-aed2-52eb114729d6%7d&wp-submit=Log+In&redi
 
 Easy, right? We can see several flags, with url encoded curly braces. Now we just need to decode them and guess the real one and it happens to be the last
 
+---
 
 ## CTF{1717b648-0323-436c-aed2-52eb114729d6}
