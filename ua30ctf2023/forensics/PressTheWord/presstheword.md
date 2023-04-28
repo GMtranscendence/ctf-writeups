@@ -33,4 +33,4 @@ log=user&pwd=CTF%7b1717b648-0323-436c-aed2-52eb114729d6%7d&wp-submit=Log+In&redi
 Easy, right? We can see several flags, with url encoded curly braces. Now we just need to decode them and to guess the real one and it happens to be the last
 
 
-_## CTF{1717b648-0323-436c-aed2-52eb114729d6}
+## CTF{1717b648-0323-436c-aed2-52eb114729d6}
