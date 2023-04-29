@@ -80,7 +80,7 @@ Luckily for me its another hint of ports that we actually need to conect to.
 
 We could connect to each port by hand, but it's actually faster to write a simple bash script to do it for us, and it scales pretty good for the future needs.
 
-```
+```bash
 #!/usr/bin/env bash
 
 ports=(61018 61011 61019 61016 61013 61015)

@@ -14,6 +14,7 @@ One of the first things you do in an image file is you look at the metadata to s
 
 ```
 [GMtranscendence] $ exiftool clue.jpg
+
 ExifTool Version Number         : 12.60
 File Name                       : clue.jpg
 Directory                       : .

@@ -31,7 +31,7 @@ As always we try several easy to guess credentials such as _admin:admin_ or _adm
 So we look at the source code and there something catches the eye. 
 
 
-```
+```php
 <!--
 	if ((md5($username) != md5($password)) && ($username == $password)){
 			$flag = file_get_contents("/home/flag.txt");
@@ -59,6 +59,7 @@ password: 0e12345678910
 
 And we bypass the authentication!
 
+
 ---
 
 But we can't quite copy the flag so we press F12 to open dev tools, and delete the topmost element  that prevents us from doing it :)
@@ -66,4 +67,5 @@ But we can't quite copy the flag so we press F12 to open dev tools, and delete t
 ---
 
 ## ctf{Be_so_good_they_cant_ignore_you}
+
 
