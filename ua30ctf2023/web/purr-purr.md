@@ -26,7 +26,7 @@ It got completely filtered out. And when we look at the source code we can se DO
 
 The code responsible for that:
 
-```
+```javascript
 var searchinput = getURLParameter('searchinput');
 // If we have search query
 if (searchinput != null && searchinput != "") {
