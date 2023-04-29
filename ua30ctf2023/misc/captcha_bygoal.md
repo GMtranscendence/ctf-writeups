@@ -77,8 +77,6 @@ To summarize it, we make a few requests to the _/img.php_ endpoint and get sever
 Cookies are necessary to get the access to the endpoint as a part of authorization process. Then we convert those images from bytes to pixel values and create a new picture that will be without the noise. We loop through each pixel with RGB values and _sum_ them in order to get the unified values. 
 Background is always grey and the operators with operands are always close to white (so as noise). Therefore if the minimum value (which is probably grey if its background or white if it's a character. more sample size gives better accuracy because of noise but lower speed) from sample images doesn't pass the treshhold we paint it as white, otherwise as black. then we use pytesseract to perform OCR on the image and extract the string based on the given regex, we extract the values (in case there was an error) and submit the result via post request. the last for loop is just for convenience to extract the flag from response body and if not found execute again.
 
-
-
 ---
 
 ## ctf{Everything_is_physics_and_math}
